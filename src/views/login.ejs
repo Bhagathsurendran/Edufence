@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Architect Sign Up</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #efefef;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      display: flex;
+      max-width: 850px;
+      width: 90%;
+      box-shadow: 5px 5px 20px rgb(205, 205, 205);
+      border-radius: 15px;
+      overflow: hidden;
+
+    }
+
+    .left {
+        flex: 1;
+        position: relative;
+        min-height: 600px;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+        padding: 30px;
+        color: white;
+    }
+
+    .left video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+
+    .left-text {
+        position: relative;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+
+    .left-text h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .left-text p {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .right {
+      flex: 1;
+      background-color: #ffffff;
+      padding: 50px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+      color: #000000;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid rgb(180, 180, 180);
+      border-radius: 6px;
+      
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #b6e17e;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: #a4c47d;
+    }
+
+    .signin {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .signin a {
+      color: #8cd1ff;
+      text-decoration: none;
+    }
+
+    .signin a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .left {
+        min-height: 300px;
+      }
+      .right {
+        padding: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="/img/white-Photoroom (1).png" style="height: 100px;position: absolute;z-index: 1;" alt="">
+    <div class="left">
+        <video autoplay muted loop>
+          <source src="/img/PinDown.io_1754325707.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      
+        <div class="left-text">
+          <h2>Real-time, reliable, and right where you are.</h2>
+          <p>Where you stand is where it counts.</p>
+         
+        </div>
+      </div>
+    
+    <div class="right">
+      <h2 style="margin-bottom: 50px;margin-top: 30px;">Log in</h2>
+      <form>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" id="email" placeholder="e.g. andrew@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="********" required>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm password</label>
+          <input type="password" id="confirm-password" placeholder="********" required>
+        </div>
+        <button type="submit" class="btn">LOG IN</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
